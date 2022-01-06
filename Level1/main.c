@@ -103,7 +103,7 @@ int main(){
 }
 #endif
 
-#if 1
+#if 0
 //10430
 #define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
@@ -116,5 +116,22 @@ int main(){
     printf("%d\n",((A%C) + (B%C))%C);
     printf("%d\n",(A*B)%C);
     printf("%d\n",((A%C) * (B%C))%C);
+}
+#endif
+
+#if 1
+//2588
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+int main(){
+    int a = 0;
+    int b = 0;
+
+    scanf("%d %d",&a,&b);
+
+    printf("%d\n",(b%10)*a);
+    printf("%d\n",(b%100-b%10)/10 * a);
+    printf("%d\n",(b/100)*a);
+    printf("%d\n",a*b);
 }
 #endif
