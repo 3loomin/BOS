@@ -24,6 +24,7 @@ int main(){
            " )  ( ')\n"
            "(  /  )\n"
            " \\(__)|");
+    return 0;
 }
 #endif
 
@@ -36,6 +37,7 @@ int main(){
            "( 0 )\"\"\"\\\n"
            "|\"^\"`    |\n"
            "||_/=\\\\__|");
+    return 0;
 }
 #endif
 
@@ -48,6 +50,7 @@ int main(){
     int b = 0;
     scanf("%d %d",&a,&b);
     printf("%d",a+b);
+    return 0;
 }
 #endif
 
@@ -60,6 +63,7 @@ int main(){
     int b = 0;
     scanf("%d %d",&a,&b);
     printf("%d",a-b);
+    return 0;
 }
 #endif
 
@@ -72,6 +76,7 @@ int main(){
     int b = 0;
     scanf("%d %d",&a,&b);
     printf("%d",a*b);
+    return 0;
 }
 #endif
 
@@ -84,6 +89,7 @@ int main(){
     double b = 0;
     scanf("%lf %lf",&a,&b);
     printf("%.9lf",a/b);
+    return 0;
 }
 #endif
 
@@ -100,6 +106,7 @@ int main(){
     printf("%d\n",a*b);
     printf("%d\n",a/b);
     printf("%d\n",a%b);
+    return 0;
 }
 #endif
 
@@ -116,6 +123,7 @@ int main(){
     printf("%d\n",((A%C) + (B%C))%C);
     printf("%d\n",(A*B)%C);
     printf("%d\n",((A%C) * (B%C))%C);
+    return 0;
 }
 #endif
 
@@ -133,5 +141,6 @@ int main(){
     printf("%d\n",(b%100-b%10)/10 * a);
     printf("%d\n",(b/100)*a);
     printf("%d\n",a*b);
+    return 0;
 }
 #endif
