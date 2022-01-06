@@ -15,7 +15,7 @@ int main() {
     return 0;
 }
 #endif
-#if 1
+#if 0
 //10171
 int main(){
     printf("\\    /\\\n"
@@ -25,3 +25,13 @@ int main(){
 }
 #endif
 
+#if 1
+//10172
+int main(){
+    printf("|\\_/|\n"
+           "|q p|   /}\n"
+           "( 0 )\"\"\"\\\n"
+           "|\"^\"`    |\n"
+           "||_/=\\\\__|");
+}
+#endif
