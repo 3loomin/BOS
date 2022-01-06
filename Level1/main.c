@@ -51,7 +51,7 @@ int main(){
 }
 #endif
 
-#if 1
+#if 0
 //1001
 #define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
@@ -62,3 +62,28 @@ int main(){
     printf("%d",a-b);
 }
 #endif
+
+#if 0
+//10998
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+int main(){
+    int a = 0;
+    int b = 0;
+    scanf("%d %d",&a,&b);
+    printf("%d",a*b);
+}
+#endif
+
+#if 1
+//1008
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+int main(){
+    double a = 0;
+    double b = 0;
+    scanf("%lf %lf",&a,&b);
+    printf("%.9lf",a/b);
+}
+#endif
+
