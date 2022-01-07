@@ -29,7 +29,7 @@ int main() {
 }
 #endif
 
-#if 1
+#if 0
 //8393
 #define CRT_NO_SECURE_WARNINGS
 #include <stdio.h>
@@ -41,6 +41,94 @@ int main() {
         sum += i;
     }
     printf("%d\n",sum);
+    return 0;
+}
+#endif
+
+#if 0
+//15552
+#define CRT_NO_SECURE_WARNINGS
+#include <stdio.h>
+int main() {
+    int n = 0;
+    scanf("%d",&n);
+    int a = 0;
+    int b = 0;
+
+    for(int i = 0; i < n; i++){
+        scanf("%d %d", &a, &b);
+        printf("%d\n", a + b);
+    }
+    return 0;
+}
+#endif
+
+#if 0
+//2741
+#define CRT_NO_SECURE_WARNINGS
+#include <stdio.h>
+int main() {
+    int n = 0;
+    scanf("%d",&n);
+    int a = 0;
+    int b = 0;
+
+    for(int i = 1; i <= n; i++){
+        printf("%d\n", i);
+    }
+    return 0;
+}
+#endif
+
+#if 0
+//2742
+#define CRT_NO_SECURE_WARNINGS
+#include <stdio.h>
+int main() {
+    int n = 0;
+    scanf("%d",&n);
+    int a = 0;
+    int b = 0;
+
+    for(int i = n; i > 0; i--){
+        printf("%d\n", i);
+    }
+    return 0;
+}
+#endif
+
+#if 0
+//11021
+#define CRT_NO_SECURE_WARNINGS
+#include <stdio.h>
+int main() {
+    int n = 0;
+    scanf("%d",&n);
+    int a = 0;
+    int b = 0;
+
+    for(int i = 1; i <= n; i++){
+        scanf("%d %d", &a, &b);
+        printf("Case #%d: %d\n", i, a + b);
+    }
+    return 0;
+}
+#endif
+
+#if 1
+//11022
+#define CRT_NO_SECURE_WARNINGS
+#include <stdio.h>
+int main() {
+    int n = 0;
+    scanf("%d",&n);
+    int a = 0;
+    int b = 0;
+
+    for(int i = 1; i <= n; i++){
+        scanf("%d %d", &a, &b);
+        printf("Case #%d: %d + %d = %d\n", i, a, b, a + b);
+    }
     return 0;
 }
 #endif
