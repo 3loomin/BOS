@@ -11,7 +11,7 @@ int main() {
 }
 #endif
 
-#if 1
+#if 0
 //10950
 #define CRT_NO_SECURE_WARNINGS
 #include <stdio.h>
@@ -25,6 +25,22 @@ int main() {
         scanf("%d %d", &a, &b);
         printf("%d\n", a + b);
     }
+    return 0;
+}
+#endif
+
+#if 1
+//8393
+#define CRT_NO_SECURE_WARNINGS
+#include <stdio.h>
+int main() {
+    int n = 0;
+    scanf("%d",&n);
+    int sum = 0;
+    for(int i = 0; i <= n; i++){
+        sum += i;
+    }
+    printf("%d\n",sum);
     return 0;
 }
 #endif
