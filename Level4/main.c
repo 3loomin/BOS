@@ -31,7 +31,7 @@ int main() {
 }
 #endif
 
-#if 0
+#if 1
 //1110
 #define CRT_NO_SECURE_WARNINGS
 #include <stdio.h>
