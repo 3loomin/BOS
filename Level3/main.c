@@ -170,7 +170,7 @@ int main() {
 }
 #endif
 
-#if 1
+#if 0
 //10871
 #define CRT_NO_SECURE_WARNINGS
 #include <stdio.h>
