@@ -115,7 +115,7 @@ int main() {
 }
 #endif
 
-#if 1
+#if 0
 //11022
 #define CRT_NO_SECURE_WARNINGS
 #include <stdio.h>
@@ -128,6 +128,23 @@ int main() {
     for(int i = 1; i <= n; i++){
         scanf("%d %d", &a, &b);
         printf("Case #%d: %d + %d = %d\n", i, a, b, a + b);
+    }
+    return 0;
+}
+#endif
+
+#if 1
+//2438
+#define CRT_NO_SECURE_WARNINGS
+#include <stdio.h>
+int main() {
+    int n = 0;
+    scanf("%d",&n);
+    for(int i = 1; i <= n; i++){
+        for(int j = 0; j < i; j++){
+            printf("*");
+        }
+        printf("\n");
     }
     return 0;
 }
