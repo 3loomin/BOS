@@ -150,7 +150,7 @@ int main() {
 }
 #endif
 
-#if 1
+#if 0
 //2439
 #define CRT_NO_SECURE_WARNINGS
 #include <stdio.h>
@@ -165,6 +165,23 @@ int main() {
             printf("*");
         }
         printf("\n");
+    }
+    return 0;
+}
+#endif
+
+#if 1
+//10871
+#define CRT_NO_SECURE_WARNINGS
+#include <stdio.h>
+int main() {
+    int n = 0;
+    int x = 0;
+    int a = 0;
+    scanf("%d %d", &n, &x);
+    for(int i = 0; i < n; i++){
+        scanf("%d", &a);
+        if(a < x) printf("%d ",a);
     }
     return 0;
 }
