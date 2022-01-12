@@ -95,7 +95,7 @@ int main() {
 }
 #endif
 
-#if 1
+#if 0
 //1546
 #define CRT_NO_SECURE_WARNINGS
 #include <stdio.h>
@@ -121,6 +121,43 @@ int main() {
     }
     res = res/n;
     printf("%lf",res);
+    return 0;
+}
+#endif
+
+#if 1
+//8958
+#define CRT_NO_SECURE_WARNINGS
+#include <stdio.h>
+#include <stdlib.h>
+int main() {
+    int n = 0;
+    int inc = 1;
+
+    scanf("%d", &n);
+    char* arr[100] = {0};
+    char* temp = (char*)malloc(80);
+    scanf("%d", &n);
+    for (int i = 0; i < n; i++) {
+        scanf("%s", temp);
+        arr[i] = temp;
+        temp = (char*)malloc(80);
+    }
+    for(int j = 0; j < n; j++ ){
+        int res = 0;
+        int k = 0;
+        while(arr[j][k] != NULL){
+            if(arr[j][k] == 'O'){
+               res += inc++;
+            }
+            else{
+                inc = 1;
+            }
+            k++;
+        }
+        inc = 1;
+        printf("%d\n",res);
+    }
     return 0;
 }
 #endif
