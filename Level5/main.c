@@ -1,4 +1,4 @@
-#if 1
+#if 0
 //10818
 #define CRT_NO_SECURE_WARNINGS
 #include <stdio.h>
@@ -21,6 +21,28 @@ int main() {
         if(max < arr[k]) max = arr[k];
     }
     printf("%d %d", min, max);
+    return 0;
+}
+#endif
+
+#if 1
+//2562
+#define CRT_NO_SECURE_WARNINGS
+#include <stdio.h>
+int main() {
+    int arr[9] = {0,};
+    for(int i = 0; i < 9; i++){
+        scanf("%d",&arr[i]);
+    }
+    int max = arr[0];
+    int idx = 0;
+    for(int j = 0; j < 9 ; j++){
+        if(max < arr[j] ){
+            max = arr[j];
+            idx = j;
+        }
+    }
+    printf("%d\n%d", max, idx + 1);
     return 0;
 }
 #endif
