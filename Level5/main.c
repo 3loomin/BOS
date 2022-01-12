@@ -125,7 +125,7 @@ int main() {
 }
 #endif
 
-#if 1
+#if 0
 //8958
 #define CRT_NO_SECURE_WARNINGS
 #include <stdio.h>
@@ -158,6 +158,60 @@ int main() {
         inc = 1;
         printf("%d\n",res);
     }
+    return 0;
+}
+#endif
+
+#if 1
+//8958
+#define CRT_NO_SECURE_WARNINGS
+#include <stdio.h>
+#include <stdlib.h>
+int main() {
+    int n = 0;
+    scanf("%d", &n);
+    for(int i = 0; i < n; i++){
+        int nn = 0;
+        double mean = 0;
+        double sum = 0;
+        double count = 0;
+        scanf("%d",&nn);
+        double *arr = (double*)malloc(sizeof(double)*nn);
+        for(int j = 0; j < nn; j++){
+            scanf("%lf",&arr[j]);
+        }
+        for(int k = 0;k < nn; k++){
+            sum += arr[k];
+        }
+        mean = sum/nn;
+        //printf("%lf\n",mean);
+        for(int s = 0; s < nn; s++){
+            if(arr[s] > mean) count += 1;
+        }
+        printf("%.3lf%\n",count/nn*100);
+    }
+    /*
+    for (int i = 0; i < n; i++) {
+        int nn = 0;
+        scanf("%d",&nn);
+        double* temp = (double*)malloc(sizeof(double)*nn);
+        for(int j = 0; j < nn; j++){
+            scanf("%lf", &temp[j]);
+            printf("%lf\n",temp[j]);
+        }
+        arr[i] = temp; //err
+        printf("hi");
+
+    for(int k = 0; k < n; k++){
+        int s = 0;
+        double sum = 0;
+        while(arr[k][s] != '\n'){
+            sum += arr[k][s];
+            s++;
+        }
+        printf("%lf\n",sum/s);
+    }
+    }*/
     return 0;
 }
 #endif
