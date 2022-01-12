@@ -25,7 +25,7 @@ int main() {
 }
 #endif
 
-#if 1
+#if 0
 //2562
 #define CRT_NO_SECURE_WARNINGS
 #include <stdio.h>
@@ -44,5 +44,30 @@ int main() {
     }
     printf("%d\n%d", max, idx + 1);
     return 0;
+}
+#endif
+
+#if 1
+//2577
+#define CRT_NO_SECURE_WARNINGS
+#include <stdio.h>
+int main() {
+   int var[3] = {0,};
+   int ans[10] = {0,};
+   for(int i = 0; i < 3; i++){
+       scanf("%d",&var[i]);
+   }
+   int res = 1;
+   for(int j = 0; j < 3; j++){
+       res *= var[j];
+   }
+   while(res != 0){
+       ans[res % 10]++;
+       res = res/10;
+   }
+   for(int k = 0; k < 10; k++){
+       printf("%d\n",ans[k]);
+   }
+   return 0;
 }
 #endif
