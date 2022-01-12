@@ -72,7 +72,7 @@ int main() {
 }
 #endif
 
-#if 1
+#if 0
 //3052
 #define CRT_NO_SECURE_WARNINGS
 #include <stdio.h>
@@ -94,3 +94,34 @@ int main() {
    return 0;
 }
 #endif
+
+#if 1
+//1546
+#define CRT_NO_SECURE_WARNINGS
+#include <stdio.h>
+#include <stdlib.h>
+int main() {
+    int n = 0;
+    double res = 0;
+    scanf("%d", &n);
+    double* score = (double*)malloc(sizeof(double) * n);
+    double* nscore = (double*)malloc(sizeof(double) * n);
+    for(int i = 0; i < n; i++){
+        scanf("%lf",&score[i]);
+    }
+    double max = score[0];
+    for(int i = 0; i < n; i++){
+        if(max < score[i]) max = score[i];
+    }
+    for(int i = 0; i < n; i++){
+        nscore[i] = score[i]/max*100;
+    }
+    for(int i = 0; i < n; i++){
+        res += nscore[i];
+    }
+    res = res/n;
+    printf("%lf",res);
+    return 0;
+}
+#endif
+
