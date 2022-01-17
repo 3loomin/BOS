@@ -25,7 +25,8 @@ int main() {
     return 0;
 }
 #endif
-#if 1
+
+#if 0
 //4673
 #define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
@@ -50,6 +51,47 @@ int main() {
     for(int j = 1; j < 10000; j++){
         if(arr[j] == 0) printf("%d\n",j);
     }
+    return 0;
+}
+#endif
+
+#if 1
+//1065
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+#include <math.h>
+#include <stdlib.h>
+int ishs(int n){
+    if(n < 100) return 1;
+
+    int stat = 0;
+    int length = log10(n);
+    int *temp = (int *) malloc(sizeof(int)*length);
+    int *d = (int *) malloc(sizeof(int)*(length -1));
+    //printf("%d\n",length);
+    for(int i = length ; i >= 0; i--){
+        temp[i] = n % 10;
+        n = n / 10;
+
+    }
+    for(int j = 0; j <= length; j++){
+        d[j] = temp[j] - temp[j+1];
+    }
+    for(int k = 0; k < length ; k++) {
+        if (d[0] == d[k]) stat = 1;
+        else stat = 0;
+    }
+    if(stat)return 1;
+    else return 0;
+}
+int main(){
+    int count = 0;
+    int n = 0;
+    scanf("%d",&n);
+    for(int i = 1; i <= n; i++){
+        if(ishs(i)) count++;
+    }
+    printf("%d", count);
     return 0;
 }
 #endif
