@@ -51,7 +51,7 @@ int main() {
 }
 #endif
 
-#if 1
+#if 0
 //2675
 #define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
@@ -80,6 +80,43 @@ int main() {
         }
         printf("%s\n",ans);
     }
+    return 0;
+}
+#endif
+
+#if 1
+//1157
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+int main() {
+    char arr[1000000] = {0};
+    int ans[26] = {0};
+    scanf("%s", arr);
+
+    int max = 0;
+    int maxidx = 0;
+    int i = 0;
+    while(arr[i] != 0){
+        if(arr[i] >= 'a' && arr[i] <= 'z') arr[i] -= 32;
+        ans[arr[i] - 'A']++;
+        i++;
+    }
+
+    for(int j = 0; j < 26; j++){
+        if(max < ans[j]){
+            max = ans[j];
+            maxidx = j;
+        }
+    }
+    int k = 0;
+    while(k < 26){
+        if(max == ans[k] && k != maxidx){
+            printf("?");
+            return 0;
+        }
+        k++;
+    }
+    printf("%c", 'A' + maxidx);
     return 0;
 }
 #endif
