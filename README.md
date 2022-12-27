@@ -1,2 +1,2 @@
 # BOS
-I hope I get better 
+백준 난이도 순서대로 문제 푸는 곳입니다. 
